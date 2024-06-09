@@ -13,40 +13,6 @@
     <button id="view-cart">View Cart</button>
 
     <script src="./product.js"></script>
-    <script>
-      const mainDiv = document.getElementById("main");
-
-      productData.forEach((product, index) => {
-        mainDiv.innerHTML += `
-                <div class="box">
-                    <div class="img-info" onmouseover="showDesc(${index})" onmouseout="hideDesc(${index})">
-                        <img class="img" src="${product.imgUrl}" alt="${product.title}">
-                        <p class="description" id="description-${index}">${product.description}</p>
-                    </div>
-                    <h1 class="title">${product.title}</h1>
-                    <p class="price">${product.price}</p>
-                    <p class="availQuan">${product.availQuan}</p>
-                    <div class="quantity-selector">
-                        Select Quantity 
-                        <span class="decrease"> - </span> 
-                        <span class="increase"> + </span>
-                    </div>
-                    <div>
-                        <button class="add-to-cart">Add To Cart</button>
-                    </div>
-                </div>
-            `;
-      });
-
-      function showDesc(index) {
-        document.getElementById(`description-${index}`).style.bottom = "0";
-        document.getElementById(`description-${index}`).style.opacity = "1";
-      }
-
-      function hideDesc(index) {
-        document.getElementById(`description-${index}`).style.bottom = "-100%";
-        document.getElementById(`description-${index}`).style.opacity = "0";
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
