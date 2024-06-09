@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #241e20;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #eceaff;
+    padding: 10px; 
+}
+h1{
+    font-size: 30px;
+    padding: 5px 0;
+}
+p{
+    padding: 5px 0;
+    font-weight: 500;
+}
+.box{
+    background-color: #fff;
+    width: 320px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px 2px #3c339a40;
+}
+.box img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: left top;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+button{
+    padding: 10px 20px;
+    background-color: #3b3576;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 3px;
+    border: none;
+    margin: 10px 10px 0 0;
+    cursor: grab;
+}
+.img-info{
+    position: relative;
+    overflow: hidden;
+}
+.description{
+    position: absolute;
+    bottom: -100%;
+    padding: 10px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.395);
+}
+.showDesc .description{
+    bottom: 0;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
